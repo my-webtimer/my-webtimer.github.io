@@ -1,13 +1,1 @@
-<!DOCTYPE html>
-<html lang='zh-TW'>  
-<head>  
-	<meta charset="UTF-8">  
-	<title>日期倒數計時器</title>  
-	<script src="https://my-timer.ml/date.js"></script>
-	<link href="https://my-timer.ml/date.css" rel="stylesheet" type="text/css">
-</head>  
-<body>
-	<button id="create" onclick="add()">Create New Timer</button><span id="timervalue"></span>
-	<span id="error"></span>
-</body>  
-</html>
+<!DOCTYPE html><html lang='zh-TW'><head><meta charset="UTF-8"><title>日期倒數計時器</title><link href="/date.css" rel="stylesheet" type="text/css"></head><body><div class="site-welcome active" id="siteWelcome"><h1>Loading...</h1></div><button id="create" onclick="add()" hidden>Create New Timer</button><span id="timervalue"></span><span id="savevalue"></span><span id="serror"></span><span id="error"></span></body><script>window.onload = function () {var MyTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;if (( MyTimeZone = 'Asia/Taipei')){var headElement = document.getElementsByTagName("head")[0];var lElement = document.createElement('script');lElement.type = 'text/javascript';lElement.src = `/zh-TW.js`;headElement.appendChild(lElement);}document.getElementById('create').hidden = false;var siteWelcome = document.getElementById('siteWelcome'); siteWelcome.classList.remove('active');}</script></html>
